@@ -32,7 +32,7 @@ int main() {
 
         if (age < 21 || age > 60) {
             cout << "\n[RESULT] REJECTED: Age must be between 21 and 60 years." << endl;
-         }
+          }
 
         else {
             cout << "Select Employment Status (1 for Permanent, 2 for Contract, 3 for Unemployed): ";
@@ -41,7 +41,7 @@ int main() {
           
             if (empStatus == 3) {
                 cout << "\n[RESULT] REJECTED: Stable income/employment required." << endl;
-               }
+                }
           
             else if (empStatus == 1 || empStatus == 2) {
                 cout << "Enter Monthly Salary (USD): ";
@@ -69,55 +69,63 @@ int main() {
                             cout << "Status        : APPROVED (Category A)" << endl;
                             cout << "Max Limit     : $30000" << endl;
                             cout << "Interest Rate : 6.5%" << endl;
-                        }
+                         }
                         else if (creditScore >= 650 && income >= 1500) {
                             cout << "Status        : APPROVED (Category B)" << endl;
                             cout << "Max Limit     : $15000" << endl;
                             cout << "Interest Rate : 9.0%" << endl;
                         }
-                        else {
+                         else {
                             cout << "Status        : REJECTED (Low credit score or insufficient income)" << endl;
-                        }
+                         }
                     }
                       else if (loanType == 2) {
-                        if (creditScore >= 720 && income >= 4000 && empStatus == 1) {
+                        
+                         if (creditScore >= 720 && income >= 4000 && empStatus == 1) {
                             cout << "Status        : APPROVED (Tier 1 Preferred)" << endl;
                             cout << "Max Limit     : $150000" << endl;
                             cout << "Interest Rate : 4.5%" << endl;
                         }
-                        else if (creditScore >= 680 && income >= 2500) {
+                   
+                         else if (creditScore >= 680 && income >= 2500) {
                             cout << "Status        : APPROVED (Standard Tier)" << endl;
                             cout << "Max Limit     : $75000" << endl;
                             cout << "Interest Rate : 7.0%" << endl;
                         }
-                        else {
+                         else {
                             cout << "Status        : REJECTED (Requires permanent job status & high credit)" << endl;
-                        }
+                         }
                     }
                     else if (loanType == 3) {
-                        if (creditScore >= 780 && income >= 5000) {
+                         if (creditScore >= 780 && income >= 5000) {
                             cout << "Status        : APPROVED (Platinum Rewards Card)" << endl;
                             cout << "Card Limit    : $20000" << endl;
                         }
-                        else if (creditScore >= 680 && income >= 2000) {
+                       
+                         else if (creditScore >= 680 && income >= 2000) {
                             cout << "Status        : APPROVED (Gold Classic Card)" << endl;
                             cout << "Card Limit    : $5000" << endl;
                         }
-                        else {
+                         else {
+                          
                             cout << "Status        : REJECTED (Ineligible for credit card issuance)" << endl;
                         }
                     }
+                 
                     else {
-                        cout << "Invalid Loan Type Selected." << endl;
-                    }
+                     
+                       cout << "Invalid Loan Type Selected." << endl;
+                     }
                 }
             }
+          
             else {
                 cout << "Invalid Employment Status entered." << endl;
             }
         }
 
     }
+   
     else if (mainChoice == 2) {
        
         
